@@ -1,7 +1,9 @@
-import sys
-sys.path.append("QueryProcessor")
-from QueryProcessor.server import Engine
+from fastapi import FastAPI
 
-if __name__ == "__main__":
-    engine = Engine()
-    engine.start()
+app = FastAPI()
+
+# app.include_router(example.router)
+
+@app.get("/")
+def read_root():
+    return {"message": "Hello, FastAPI!"}
