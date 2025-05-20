@@ -1,12 +1,7 @@
-import os
-import sys
 import ast
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append("structures")
-sys.path.append("reader")
-from reader.reader import read_documents
-from structures.Levinshtein import levinshtein_distance
-from settings import INDEX_FILE, WORDS_DB_FILE
+from ..structures.levinshtein import levinshtein_distance
+
+# TODO: change these functions
 
 def tokenizing(input_file):
     res = list() 
