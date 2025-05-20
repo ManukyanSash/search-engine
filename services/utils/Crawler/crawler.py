@@ -1,13 +1,7 @@
-import os
-import sys
 import requests
 import parse
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.append("reader")
-from reader.reader import add_to_documents
 
-def parse_page(url):
-    print("A")
+def parse_page(url): # TODO: Change function structure
     content = ""
     try:
         response = requests.get(url)
@@ -22,7 +16,6 @@ def parse_page(url):
     finally:
         with open("log.txt", "w") as file:
             file.write(content)
-        add_to_documents(url)
 
         
 

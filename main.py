@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from services.utils.crawler import crawler
 
 app = FastAPI()
 
